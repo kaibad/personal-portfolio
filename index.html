@@ -38,33 +38,83 @@
                     <img src="images/2.png" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
                     <p>
                          I'm a web designer  who is a professional who creates and designs websites. This can involve a wide range of tasks, including layout and design, coding, content creation, and search engine optimization (SEO). Web designers may work on the visual appearance of a website, including its layout, color scheme, and typography, as well as the functionality of the site, including how users navigate and interact with it. Web designers often use various tools and software, such as graphic design and development programs, to create and build websites.
                     </p>
                     <div class="tag-title">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web Developer</span><BR>Designing web pages/website</li>
                             <li><span>UI/ux</span><BR>Designing web/app</li>
                              <li><span>App Developer</span><BR>Building andoid/Ios app</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents " id="experience">
                         <ul>
-                            <li><span>Web Developer</span><BR>Designing web pages/website</li>
-                            <li><span>UI/ux</span><BR>Designing web/app</li>
-                             <li><span>App Developer</span><BR>Building andoid/Ios app</li>
+                            <li><span> not</span><BR>yet wroking</li>
+                            <!-- <li><span>not</span><BR>Designing web/app</li>
+                             <li><span>App Developer</span><BR>Building andoid/Ios app</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><BR>Bsc.csit from Tribhuwan University</li>
+                            <!-- <li><span>UI/ux</span><BR>Designing web/app</li>
+                             <li><span>App Developer</span><BR>Building andoid/Ios app</li> -->
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- -----------services------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"> My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>web design</h2>
+                    <p>Web design services will vary depending on the designer, so always inquire in advance. Some of the more popular services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>
+                  <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>UI/ux Design</h2>
+                    <p>Web design services will vary depending on the designer, so always inquire in advance. Some of the more popular services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>
+                  <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>App design</h2>
+                    <p>Web design services will vary depending on the designer, so always inquire in advance. Some of the more popular services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>
+                  <a href="#">learn more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+    
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+    
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+       
     
 </body>
 </html>
